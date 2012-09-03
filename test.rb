@@ -1,7 +1,16 @@
-def print_array (array)
-  array.each_with_index do |string, index|
-   puts "Line #{index + 1}: #{string}"
-  end
+title = 'Programming Ruby'
+price = 3_990
+puts '"#{title}" is #{price} yen.'
+
+
+def try 
+  if block_given? 
+    yield 
+  else 
+    puts "no block" 
+  end 
+end 
+ 
+try do
+  puts "hello"
 end
-s = "Welcome to the forum.\nHere you can learn Ruby.\nAlong with other members.\n"
-print_array(s.split("\n"))

@@ -1,0 +1,9 @@
+--- 
+cursor_positions: 
+  - :path: test.rb
+    :cursor_offset: 185
+    :timestamp: 2012-09-02 20:55:05 -04:00
+  - :path: 2week/W2E1.rb
+    :cursor_offset: 495
+    :timestamp: 2012-09-02 20:37:31 -04:00
+files_to_retain: 0
