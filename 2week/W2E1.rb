@@ -10,8 +10,6 @@ Line 3: Along with other members.
 
 s = "Welcome to the forum,\nHere you can learn Ruby.\nAlong with other members.\n"
 
-#line_number = 0
-arry = s.split("\n").each do |line|
-  line_number.index += 1
-  puts 'Line ' + line_number.to_s + ': ' + line
+s.split("\n").to_enum.with_index(1).each do |line, index|
+   puts "Line #{index}: #{line}"
 end
