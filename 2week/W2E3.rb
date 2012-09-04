@@ -6,20 +6,19 @@ in a leap year (2000 and 2004) and the number of minutes in a non-leap year
 divisible by 400.
 =end
 
-def leap_year?(year)
-  case
-  when year % 4 == 0 then true
-  when year % 100  && 400 == 0 then true
-  when year % 400 == 0 then true
-  else
-    false
-  end
-end
 
 
 puts "Enter the year: "
 STDOUT.flush
-year = gets
+year = gets.to_i
+
+def leap_year?(year)
+  if year % 4 == 0 and year % 100 != 0  || 400 == 0 
+    return true
+  else
+    return false
+  end
+end
 
 
 
@@ -30,4 +29,3 @@ leap_year?(year) do |leap_year|
     puts "#{year} is not a leap year."
   end
 end
-
