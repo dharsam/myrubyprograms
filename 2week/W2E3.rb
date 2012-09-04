@@ -25,17 +25,16 @@ def leap_year?(year)
   year % 4 == 0 and year % 100 != 0 or year % 400 == 0
 end
 
+def is_or_not(boolean)
+  block_given? ? yield :
+    boolean ? 'is' : 'is not'
+end
+
 if __FILE__ == $0
-  puts "Enter the year: "
-  STDOUT.flush
-  # year = gets
-
-  leap_year?(year) do |leap_year|
-    if leap_year? == true
-      puts "#{year} is a leap year."
-    else
-      puts "#{year} is not a leap year."
-    end
-  end
-
+  [1800, 1900, 2000, 1999].each do |year|
+    puts "Enter the year: "
+    STDOUT.flush
+    # year = gets.strip
+    puts( " #{year} #{is_or_not(leap_year?(year)) { leap_year?(year) ? 'was' : 'was not'}} a leap year. ")
+end
 end
