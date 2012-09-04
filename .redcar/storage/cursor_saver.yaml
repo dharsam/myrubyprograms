@@ -12,6 +12,8 @@ cursor_positions:
     :cursor_offset: 495
     :timestamp: 2012-09-02 20:37:31 -04:00
   - :path: 2week/W2E3.rb
-    :cursor_offset: 630
+    :cursor_offset: 420
     :timestamp: 2012-09-03 01:26:47 -04:00
+    :selection_offset: 780
+    :block_selection_mode: false
 files_to_retain: 0
